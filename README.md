@@ -22,3 +22,6 @@ git clone https://github.com/Ujwal-Nandanwar/smart-data-visualizer.git
 cd smart-data-visualizer
 pip install -r requirements.txt
 streamlit run app.py
+
+## Streamlit
+- https://smart-data-visualizer-using-csv.streamlit.app/
