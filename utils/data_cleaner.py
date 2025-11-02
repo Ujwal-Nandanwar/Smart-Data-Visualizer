@@ -1,14 +1,10 @@
 import pandas as pd
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Clean dataset by removing duplicates, filling/removing missing values.
-    Returns a cleaned DataFrame.
-    """
-    # Remove duplicate rows
+    
+    # Remove duplicate rows and droping column with missing values
     df = df.drop_duplicates()
 
-    # Drop columns with >50% missing values
     threshold = len(df) * 0.5
     df = df.dropna(thresh=threshold, axis=1)
 

@@ -11,20 +11,19 @@ st.write(
     "and valid columns for visualization."
 )
 
-# Step 1: Upload CSV
+# Inputing CSV file
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
 
 if uploaded_file:
-    # Step 2: Read & show data
+    # Reading ans cleaning data , Showing graph option
     df = pd.read_csv(uploaded_file)
     st.subheader("📋 Data Preview")
     st.dataframe(df.head())
 
-    # Step 3: Clean data
     df = clean_data(df)
     st.success("✅ Data cleaned successfully!")
 
-    # Step 4: Select Graph Type First
+    
     plot_type = st.selectbox(
         "Choose the type of graph you want to visualize:",
         [
@@ -38,13 +37,13 @@ if uploaded_file:
         ],
     )
 
-    # Detect column types
+    # Separating numeric and categorical columns
     numeric_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
     categorical_cols = df.select_dtypes(include=["object", "category"]).columns.tolist()
 
     x_col, y_col = None, None
 
-    # Step 5: Restrict valid column options based on graph type
+    # Inputing columns based on plot type
     if plot_type == "Line Plot":
         x_col = st.selectbox("Select X-axis (Numeric or Date)", numeric_cols)
         y_col = st.selectbox("Select Y-axis (Numeric)", numeric_cols)
@@ -70,7 +69,7 @@ if uploaded_file:
     elif plot_type == "Heatmap":
         st.info("Heatmap will use all numeric columns automatically.")
 
-    # Step 6: Generate Plot
+    # Generating Plot
     if st.button("Generate Plot"):
         st.subheader(f"📈 {plot_type}")
         fig = generate_plot(df, plot_type, x_col, y_col)

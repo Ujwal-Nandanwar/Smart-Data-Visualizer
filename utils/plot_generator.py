@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def generate_plot(df, plot_type, x_col=None, y_col=None):
-    """
-    Generate and return a matplotlib figure based on the selected plot type.
-    """
     sns.set_theme(style="whitegrid")
     fig, ax = plt.subplots(figsize=(9, 5))
 
