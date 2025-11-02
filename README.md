@@ -26,6 +26,7 @@ cd Smart-Data-Visualizer
 pip install -r requirements.txt
 python -m streamlit run app.py
 
+
 ## 🚀 Live Demo
 
 Check out the live app hosted on **Streamlit Cloud**:  
