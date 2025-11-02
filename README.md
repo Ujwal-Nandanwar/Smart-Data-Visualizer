@@ -1,27 +1,29 @@
 # 📊 Smart Data Visualizer
 
-A Streamlit web app that allows users to upload CSV files, clean them automatically, and create visualizations interactively.
+A Streamlit web application that allows users to upload a CSV dataset, automatically clean it, and visualize the data interactively.
 
 ## 🚀 Features
-- Upload and preview CSV data
-- Automatic data cleaning (remove duplicates, fill missing values)
-- Choose X/Y columns and plot type
-- Supports Line, Bar, Scatter, Histogram, and Boxplot
-- Real-time plot updates
+- Upload any CSV file
+- Automatic data cleaning (missing values, duplicates)
+- Select graph type first → dynamic X/Y axis restriction
+- Interactive and beautiful charts (Matplotlib + Seaborn)
+- Hosted via Streamlit and version controlled on GitHub
 
-## 🛠️ Technologies Used
-- Python
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Streamlit
-- GitHub (for version control and hosting)
+## 🧩 Supported Plots
+- Line Plot  
+- Bar Plot  
+- Scatter Plot  
+- Histogram  
+- Boxplot  
+- Countplot  
+- Heatmap  
 
-## ▶️ Run Locally
+## ⚙️ Installation
+
 ```bash
-git clone https://github.com/Ujwal-Nandanwar/smart-data-visualizer.git
-cd smart-data-visualizer
+git clone https://github.com/Ujwal-Nandanwar/Smart-Data-Visualizer.git
+cd Smart-Data-Visualizer
+python -m venv .venv
+source .venv/bin/activate   # On Windows: .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 streamlit run app.py
-
-## Streamlit
-- https://smart-data-visualizer-using-csv.streamlit.app/
