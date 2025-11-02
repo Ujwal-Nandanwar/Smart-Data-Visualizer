@@ -23,7 +23,10 @@ A Streamlit web application that allows users to upload a CSV dataset, automatic
 ```bash
 git clone https://github.com/Ujwal-Nandanwar/Smart-Data-Visualizer.git
 cd Smart-Data-Visualizer
-python -m venv .venv
-source .venv/bin/activate   # On Windows: .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-streamlit run app.py
+python -m streamlit run app.py
+
+## 🚀 Live Demo
+
+Check out the live app hosted on **Streamlit Cloud**:  
+👉 [**Smart Data Visualizer (Live App)**](https://smart-data-visualizer-using-csv.streamlit.app/)
